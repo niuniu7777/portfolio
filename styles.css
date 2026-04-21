@@ -282,6 +282,21 @@ body::before {
   align-items: start;
 }
 
+.intro-copy {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.intro-copy .eyebrow {
+  display: inline-flex;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(215, 168, 110, 0.1);
+  border: 1px solid rgba(215, 168, 110, 0.22);
+}
+
 .intro-copy h2,
 .section-heading h2,
 .project-copy h2 {
@@ -289,9 +304,16 @@ body::before {
   line-height: 1.12;
 }
 
+.intro-copy h2 {
+  max-width: 12ch;
+  font-size: clamp(2.6rem, 5vw, 5rem);
+  line-height: 1.04;
+}
+
 .intro-points {
   display: grid;
-  gap: 18px;
+  gap: 26px;
+  padding-top: 4px;
 }
 
 .section-heading {
@@ -431,19 +453,36 @@ body::before {
 }
 
 .contact-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .contact-grid a {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 112px;
-  padding: 20px;
-  border-radius: 22px;
+  min-height: 132px;
+  padding: 24px;
+  border-radius: 26px;
   color: var(--text);
   font-weight: 700;
   text-align: center;
+  font-size: 1.08rem;
+  line-height: 1.5;
+}
+
+.contact-heading {
+  align-items: start;
+  grid-template-columns: 140px minmax(0, 1fr);
+}
+
+.contact-heading .eyebrow {
+  margin-top: 22px;
+}
+
+.contact-heading h2 {
+  max-width: 18ch;
+  font-size: clamp(2.8rem, 6vw, 5.6rem);
+  line-height: 0.98;
 }
 
 .reveal {
@@ -473,6 +512,14 @@ body::before {
   .section-heading {
     align-items: start;
     flex-direction: column;
+  }
+
+  .contact-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-heading .eyebrow {
+    margin-top: 0;
   }
 }
 
