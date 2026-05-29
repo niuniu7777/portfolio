@@ -1,4 +1,4 @@
-const revealTargets = document.querySelectorAll(".section, .experience-card, .strength-grid article, .education-card, .project-link-card, .contact-grid a");
+const revealTargets = document.querySelectorAll(".section, .work-card, .capability-card, .experience-item, .metric-wall article, .education-panel, .skills-panel, .contact-grid a");
 
 revealTargets.forEach((element) => {
   element.classList.add("reveal");
